@@ -1,0 +1,59 @@
+Usage
+=====
+  rabbitmqadmin [options] subcommand
+
+Options
+=======
+--help, -h              show this help message and exit
+--config=CONFIG, -c CONFIG
+                        configuration file [default: ~/.rabbitmqadmin.conf]
+--node=NODE, -N NODE    node described in the configuration file [default:
+                        'default' only if configuration file is specified]
+--host=HOST, -H HOST    connect to host HOST [default: localhost]
+--port=PORT, -P PORT    connect to port PORT [default: 15672]
+--path-prefix=PATH_PREFIX
+                        use specific URI path prefix for the RabbitMQ HTTP
+                        API. /api and operation path will be appended to it.
+                        (default: blank string) [default: ]
+--vhost=VHOST, -V VHOST
+                        connect to vhost VHOST [default: all vhosts for list,
+                        '/' for declare]
+--username=USERNAME, -u USERNAME
+                        connect using username USERNAME [default: guest]
+--password=PASSWORD, -p PASSWORD
+                        connect using password PASSWORD [default: guest]
+--base-uri=URI, -U URI  connect using a base HTTP API URI. /api and operation
+                        path will be appended to it. Path will be ignored.
+                        --vhost has to be provided separately.
+--quiet, -q             suppress status messages [default: True]
+--ssl, -s               connect with ssl [default: False]
+--ssl-key-file=SSL_KEY_FILE
+                        PEM format key file for SSL
+--ssl-cert-file=SSL_CERT_FILE
+                        PEM format certificate file for SSL
+--ssl-ca-cert-file=SSL_CA_CERT_FILE
+                        PEM format CA certificate file for SSL
+--ssl-disable-hostname-verification
+                        Disables peer hostname verification
+--ssl-insecure, -k      Disables all SSL validations like curl's '-k' argument
+--request-timeout=REQUEST_TIMEOUT, -t REQUEST_TIMEOUT
+                        HTTP request timeout in seconds [default: 120]
+--format=FORMAT, -f FORMAT
+                        format for listing commands - one of [raw_json,
+                        pretty_json, tsv, long, table, kvp, bash] [default:
+                        table]
+--sort=SORT, -S SORT    sort key for listing queries
+--sort-reverse, -R      reverse the sort order
+--depth=DEPTH, -d DEPTH
+                        maximum depth to recurse for listing tables [default:
+                        1]
+--bash-completion       Print bash completion script [default: False]
+--version               Display version and exit
+
+More Help
+=========
+
+For more help use the help subcommand:
+
+  rabbitmqadmin help subcommands  # For a list of available subcommands
+  rabbitmqadmin help config       # For help with the configuration file
